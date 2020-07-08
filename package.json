@@ -6,14 +6,17 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-  "build" : "n"
+    "build": "n"
   },
   "keywords": [],
   "author": "Elian Marcos - Semana FSM-DevPleno",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^9.8.4",
     "next": "^9.4.4",
+    "postcss-import": "^12.0.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "tailwindcss": "^1.4.6"
   }
 }

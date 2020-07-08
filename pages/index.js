@@ -1,17 +1,24 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
 const Index = () => {
-    return(
-        <div>
-            <h1>Olá Semana Fullstack Master</h1>
-            <div>
-                <Link href='/sobre'>
-                    <a>Sobre</a>
-                </Link>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <p className='mt-12 text-center'> 
+        O restaurante X sempre busca atender melhor seus clientes.
+        <br />
+        Por isso, estamos sempre abertos a ouvir sua opinião
+      </p>
+     <div className='text-center my-12 '>
+         <Link href=''>
+             <a className='bg-blue-400 px-6 py-4 font-bold rounded-lg shadow-lg'>Dar opinião ou sugestão</a>
+         </Link>
+     </div>
+     <p className='my-12 text-center'> 
+       Mensagem do desconto
+      </p>
+    </div>
+  );
+};
 
-export default Index
+export default Index;
