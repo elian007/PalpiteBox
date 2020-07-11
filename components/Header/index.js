@@ -10,8 +10,8 @@ const Header = () => {
           <Link href="/">
             <a>
               <img
-                className="max-w-1/10 mx-auto"
-                src="/logo_palpitebox.png"
+                className="max-w-1/4 mx-auto"
+                src="/hamb1.png"
                 alt="PalpiteBox"
               />
             </a>
@@ -19,15 +19,15 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="bg-gray-300 p-4 shadow-md text-center">
+      <div className="bg-red-400 p-4 shadow-md text-center">
         <Link href="/sobre">
-          <a className="px-2 hover:underline">Sobre</a>
+          <a className="px-2 hover:underline text-white">Sobre</a>
         </Link>
         <Link href="/contato">
-          <a className="px-2 hover:underline">Contato</a>
+          <a className="px-2 hover:underline  text-white">Contato</a>
         </Link>
         <Link href="/pesquisa">
-          <a className="px-2 hover:underline">Pesquisa</a>
+          <a className="px-2 hover:underline text-white">Pesquisa</a>
         </Link>
       </div>
     </React.Fragment>
