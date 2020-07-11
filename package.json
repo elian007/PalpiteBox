@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "n"
+    "build": "next build"
   },
   "keywords": [],
   "author": "Elian Marcos - Semana FSM-DevPleno",
