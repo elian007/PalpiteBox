@@ -54,6 +54,8 @@ const Pesquisa = () => {
             onChange={onChange}
             name="Nome"
             value={form.Nome}
+            required
+            title='Preencha o campo Nome!'
           />
           <label className="font-bold">E-mail:</label>
           <input
@@ -63,6 +65,9 @@ const Pesquisa = () => {
             onChange={onChange}
             name="Email"
             value={form.Email}
+            required
+            title='Preencha o campo Email!
+            '
           />
           <label className="font-bold">Whatsapp:</label>
           <input
@@ -72,6 +77,8 @@ const Pesquisa = () => {
             onChange={onChange}
             name="Whatsapp"
             value={form.Whatsapp}
+            required
+            title='Preencha o campo Whatsapp!'
           />
           <label className="font-bold">Nota:</label>
           <div className='flex py-6'>
@@ -79,7 +86,7 @@ const Pesquisa = () => {
             return (
               <label className='block w-1/6 text-center'>
                 {nota} <br />
-                <input type="radio" name="Nota" value={nota} onChange={onchange} />
+                <input type="radio" name="Nota" value={nota} onChange={onChange} required title='Preencha o campo Nota'/>
               </label>
             );
           })}
