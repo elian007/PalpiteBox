@@ -10,8 +10,12 @@ module.exports = {
           '1/4': '25%',
           '1/2': '50%',
           '3/4': '75%',
+          '10/5':'200%'
           }
   },
-  variants: {},
+  variants: {
+    gridTemplateColumns: ['responsive'],
+    gridTemplateColumns: ['responsive', 'hover', 'focus'],
+  },
   plugins: [],
 }
