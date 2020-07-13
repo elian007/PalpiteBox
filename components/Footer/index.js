@@ -34,16 +34,26 @@ const Footer = () => {
         /
         <div className="mt-4 ">
           <img
-            className="inline p-4 max-w-1/15"
+            className="inline p-4 max-w-15/100"
             src="/logo_devpleno.png"
             alt="DevPleno"
           />
           <img
-            className="inline p-4 max-w-1/15"
+            className="inline p-4 max-w-15/100"
             src="/logo_semana_fsm.png"
             alt="Semana Fullstack Master"
           />
         </div>
+      </div>
+      <div className='pt-6 text-right text-xs'>
+        *Ícones feitos por{" "}
+        <a href="https://www.flaticon.com/br/autores/freepik" title="Freepik">
+          Freepik
+        </a>{" "}
+        from{" "}
+        <a href="https://www.flaticon.com/br/" title="Flaticon">
+          www.flaticon.com
+        </a>
       </div>
     </div>
   );

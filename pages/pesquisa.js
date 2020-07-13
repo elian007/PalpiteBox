@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import PageTitle from '../components/pageTitle'
+import PageTitle from "../components/pageTitle";
 
 const Pesquisa = () => {
   const [form, setForm] = useState({
     Nome: "",
     Email: "",
     Whatsapp: "",
+    Sugestao: "",
     Nota: 0,
   });
   const notas = [0, 1, 2, 3, 4, 5];
@@ -13,7 +14,6 @@ const Pesquisa = () => {
   const [retorno, setRetorno] = useState({});
 
   const save = async () => {
-    
     try {
       const response = await fetch("/api/save", {
         method: "POST",
@@ -34,7 +34,7 @@ const Pesquisa = () => {
   };
   return (
     <div className="pt-6">
-     <PageTitle title='Pesquisa' />
+      <PageTitle title="Pesquisa" />
       <h1 className="text-center font-bold my-4 text-2xl">
         Críticas e Sugestões
       </h1>
@@ -55,7 +55,7 @@ const Pesquisa = () => {
             name="Nome"
             value={form.Nome}
             required
-            title='Preencha o campo Nome!'
+            title="Preencha o campo Nome!"
           />
           <label className="font-bold">E-mail:</label>
           <input
@@ -66,8 +66,8 @@ const Pesquisa = () => {
             name="Email"
             value={form.Email}
             required
-            title='Preencha o campo Email!
-            '
+            title="Preencha o campo Email!
+            "
           />
           <label className="font-bold">Whatsapp:</label>
           <input
@@ -78,18 +78,37 @@ const Pesquisa = () => {
             name="Whatsapp"
             value={form.Whatsapp}
             required
-            title='Preencha o campo Whatsapp!'
+            title="Preencha o campo Whatsapp!"
+          />
+
+          <label className="font-bold">Deixe sua sugestão e/ou crítica:</label>
+          <input
+            type="text"
+            className="p-4 block shadow bg-blue-100 m-2 rounded my-2"
+            placeholder="Sugestao"
+            onChange={onChange}
+            name="Sugestao"
+            value={form.Sugestao}
+            required
+            title="Preencha o campo Sugestao!"
           />
           <label className="font-bold">Nota:</label>
-          <div className='flex py-6'>
-          {notas.map((nota) => {
-            return (
-              <label className='block w-1/6 text-center'>
-                {nota} <br />
-                <input type="radio" name="Nota" value={nota} onChange={onChange} required title='Preencha o campo Nota'/>
-              </label>
-            );
-          })}
+          <div className="flex py-6">
+            {notas.map((nota) => {
+              return (
+                <label className="block w-1/6 text-center">
+                  {nota} <br />
+                  <input
+                    type="radio"
+                    name="Nota"
+                    value={nota}
+                    onChange={onChange}
+                    required
+                    title="Preencha o campo Nota"
+                  />
+                </label>
+              );
+            })}
           </div>
           <button
             className="bg-yellow-500 px-12 py-4 font-bold text-white rounded-lg shadow-lg hover:shadow mb-2"
